@@ -19,6 +19,8 @@ async function main() {
   try {
     console.log("Downloading files...");
     execSync(`git clone --depth 1 ${git_repo} ${projectPath}`);
+    // Git overwrite the folder as git cant clone to a non empty folder
+    // npm i and npx rimraf should be fine too Maybe?
 
     process.chdir(projectPath);
 
