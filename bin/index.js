@@ -4,9 +4,9 @@ const path = require("path");
 const fs = require("fs");
 
 if (process.argv.length < 3) {
-  console.log("You have to provide a name to your app.");
+  console.log("Please provide a name...");
   console.log("For example :");
-  console.log("    npx create-my-boilerplate my-app");
+  console.log("    npx p5ts my-app");
   process.exit(1);
 }
 
@@ -19,9 +19,7 @@ try {
   fs.mkdirSync(projectPath);
 } catch (err) {
   if (err.code === "EEXIST") {
-    console.log(
-      `The file ${projectName} already exist in the current directory, please give it another name.`
-    );
+    console.log(`The file ${projectName} already exists`);
   } else {
     console.log(error);
   }
@@ -39,9 +37,10 @@ async function main() {
 
     console.log("Removing useless files");
     execSync("npx rimraf ./.git");
-    fs.rmdirSync(path.join(projectPath, "bin"), { recursive: true });
+    fs.rmSync(path.join(projectPath, "bin"), { recursive: true });
 
-    console.log("The installation is done, this is ready to use !");
+    console.log("The installation is done... I think?");
+    console.log("To enable Live Editing run:  npm start");
   } catch (error) {
     console.log(error);
   }
