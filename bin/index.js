@@ -36,7 +36,11 @@ async function main() {
 
     const fileName = "../package.json";
     const file = require(fileName);
-    file.name = projectName;
+    if (projectName === ".") {
+      file.name = "general kenobi";
+    } else {
+      file.name = projectName;
+    }
     file.author = "";
     delete file.bin;
 

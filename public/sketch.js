@@ -27,7 +27,7 @@ var sketch = function (p5) {
     };
     p5.draw = function () {
         p5.background(50);
-        // p5.sphere(60);
+        p5.sphere(60);
     };
 };
 new P5(sketch);
