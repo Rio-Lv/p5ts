@@ -4,7 +4,7 @@
     "description": "p5 typescript workflow ",
     "main": "public/sketch.js",
     "bin": {
-        "tfjs": "bin/generate-template.js"
+        "p5ts": "./bin/index.js"
     },
     "scripts": {
         "watch": "rollup --config -w",
