@@ -1,23 +1,23 @@
-<h1>P5 Typescript Setup </h1>
-Easy to use typescript setup for P5 js. So you can use more intellisense and stuff.
+<h1>Fast P5 Typescript Setup</h1>
 
 ![p5ts_demo](https://user-images.githubusercontent.com/68161803/167474944-85252cd7-632d-45cc-ab52-e9865057cfd2.png)
 
 <h2> Getting Started </h2>
 
-<p1>To create a template</p1>
+<p1>Create a template </p1>
 
 ```
-$ npx p5ts your-app-name
+$ npx p5ts <your-app-name>
 ```
 
-<p1>To see your sketch run</p1>
+<p1>Run sketch</p1>
 
 ```
+$ cd <your-app-name>
 $ npm start
 ```
 
-saving your files in ./src will automatically update your sketch
+you can find the sketch in src/sketch.ts
 
 <h3>How it works</h3>
 <ul>
@@ -25,7 +25,7 @@ saving your files in ./src will automatically update your sketch
 1. Rollup watches the ./src folder for changes. 
 </li>
 <li> 
-2. On change bundles to ./public as common js
+2. On change => bundles to ./public as common js
 </li>
 <li> 
 3. Live Server linked to ./public
