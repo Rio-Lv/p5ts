@@ -42,11 +42,9 @@ async function main() {
 
     fs.writeFile(
       "./package.json",
-      JSON.stringify(file),
+      JSON.stringify(file, null, 2),
       function writeJSON(err) {
         if (err) return console.log(err);
-        console.log(JSON.stringify(file));
-        // console.log("writing to " + fileName);
       }
     );
   } catch (error) {
