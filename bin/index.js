@@ -15,16 +15,6 @@ const currentPath = process.cwd();
 const projectPath = path.join(currentPath, projectName);
 const git_repo = "https://github.com/Rio-Lv/p5ts.git";
 
-try {
-  fs.mkdirSync(projectPath);
-} catch (err) {
-  if (err.code === "EEXIST") {
-    console.log(`The file ${projectName} already exists`);
-  } else {
-    console.log(error);
-  }
-  process.exit(1);
-}
 async function main() {
   try {
     console.log("Downloading files...");
@@ -45,4 +35,19 @@ async function main() {
     console.log(error);
   }
 }
-main();
+
+try {
+  fs.mkdirSync(projectPath);
+  main(); // make file with name given
+} catch (err) {
+  if (err.code === "EEXIST") {
+    if (projectName === ".") {
+      main(); // make file in root directory
+    } else {
+      console.log(`The file ${projectName} already exists`);
+    }
+  } else {
+    console.log(error);
+    process.exit(1);
+  }
+}

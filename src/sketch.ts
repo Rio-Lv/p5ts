@@ -8,7 +8,7 @@ const sketch = (p5: P5) => {
   };
   p5.draw = () => {
     p5.background(50);
-    // p5.sphere(60);
+    p5.sphere(60);
   };
 };
 
