@@ -1,13 +1,14 @@
 <h1>P5 Typescript Setup </h1>
 Easy to use typescript setup for P5 js. So you can use intellisense or something.
 <h2> Getting Started </h2>
-<p1>to create a template</p1>
+
+<p1>To create a template</p1>
 
 ```
 $ npx p5ts your-app-name
 ```
 
-<p1>to see your sketch run</p1>
+<p1>To see your sketch run</p1>
 
 ```
 $ npm start
