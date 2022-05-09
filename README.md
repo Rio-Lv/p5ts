@@ -1,5 +1,8 @@
 <h1>P5 Typescript Setup </h1>
-Easy to use typescript setup for P5 js. So you can use intellisense or something.
+Easy to use typescript setup for P5 js. So you can use more intellisense and stuff.
+
+![p5ts_demo](https://user-images.githubusercontent.com/68161803/167474944-85252cd7-632d-45cc-ab52-e9865057cfd2.png)
+
 <h2> Getting Started </h2>
 
 <p1>To create a template</p1>
