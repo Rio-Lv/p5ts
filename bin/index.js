@@ -33,6 +33,22 @@ async function main() {
 
     console.log("The installation is done... I think?");
     console.log("To enable Live Editing run:  npm start");
+
+    const fileName = "../package.json";
+    const file = require(fileName);
+    file.name = projectName;
+    file.author = "";
+    delete file.bin;
+
+    fs.writeFile(
+      "./package.json",
+      JSON.stringify(file),
+      function writeJSON(err) {
+        if (err) return console.log(err);
+        console.log(JSON.stringify(file));
+        // console.log("writing to " + fileName);
+      }
+    );
   } catch (error) {
     console.log(error);
   }
