@@ -3,6 +3,9 @@
     "version": "0.0.3",
     "description": "p5 typescript workflow ",
     "main": "public/sketch.js",
+    "bin": {
+        "tfjs": "bin/generate-template.js"
+    },
     "scripts": {
         "watch": "rollup --config -w",
         "serve": "live-server --open=public  --watch=./public/sketch.js",

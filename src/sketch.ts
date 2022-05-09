@@ -3,11 +3,12 @@ import { cat } from "./functions";
 
 const sketch = (p5: P5) => {
   p5.setup = () => {
-    p5.createCanvas(500, 500);
-    cat();
+    p5.createCanvas(500, 500, "webgl");
+    // cat();
   };
   p5.draw = () => {
-    p5.background(80);
+    p5.background(50);
+    // p5.sphere(60);
   };
 };
 

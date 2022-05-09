@@ -20,15 +20,14 @@ var p5_min = {exports: {}};
 
 var P5 = /*@__PURE__*/getDefaultExportFromCjs(p5_min.exports);
 
-var cat = function () { return console.log("woof"); };
-
 var sketch = function (p5) {
     p5.setup = function () {
-        p5.createCanvas(500, 500);
-        cat();
+        p5.createCanvas(500, 500, "webgl");
+        // cat();
     };
     p5.draw = function () {
-        p5.background(80);
+        p5.background(50);
+        // p5.sphere(60);
     };
 };
 new P5(sketch);
