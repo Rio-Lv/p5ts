@@ -1,6 +1,6 @@
 {
     "name": "p5ts",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "description": "p5 typescript workflow ",
     "main": "public/sketch.js",
     "bin": {
