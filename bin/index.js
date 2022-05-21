@@ -27,11 +27,7 @@ async function main() {
     console.log("Installing dependencies...");
     execSync("npm install");
 
-    console.log("Removing useless files");
-    execSync("npx rimraf ./.git");
-    fs.rmSync(path.join(projectPath, "bin"), { recursive: true });
-
-    console.log("The installation is done... I think?");
+    console.log("Installation complete");
     console.log("To enable Live Editing run:  npm start");
 
     const fileName = "../package.json";
@@ -51,6 +47,10 @@ async function main() {
         if (err) return console.log(err);
       }
     );
+
+    console.log("Removing useless files");
+    execSync("npx rimraf ./.git");
+    fs.rmSync(path.join(projectPath, "bin"), { recursive: true });
   } catch (error) {
     console.log(error);
   }
