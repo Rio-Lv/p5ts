@@ -30,6 +30,9 @@ async function main() {
     console.log("Installation complete");
     console.log("To enable Live Editing run:  npm start");
 
+    console.log("Removing useless files");
+    execSync("npx rimraf ./.git");
+
     const fileName = "../package.json";
     const file = require(fileName);
     if (projectName === ".") {
@@ -48,8 +51,6 @@ async function main() {
       }
     );
 
-    console.log("Removing useless files");
-    execSync("npx rimraf ./.git");
     fs.rmSync(path.join(projectPath, "bin"), { recursive: true });
   } catch (error) {
     console.log(error);
