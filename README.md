@@ -2,6 +2,11 @@
 
 ![p5ts_demo](https://user-images.githubusercontent.com/68161803/167474944-85252cd7-632d-45cc-ab52-e9865057cfd2.png)
 
+<h2> About </h2>
+
+<p1>[p5ts](https://www.npmjs.com/package/p5ts) is a Node Package Execution that generates a Typescript implementation of the popular visual graphics library [p5js](https://p5js.org/) which is usually written in Javascript.</p1>
+<p1>This allows you to use that lovely ES6 syntax with the amazing *p5js* library</p1>
+
 <h2> Getting Started </h2>
 
 <p1>Create a template </p1>
